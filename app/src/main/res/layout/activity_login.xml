@@ -71,7 +71,6 @@
                 android:text="@string/action_sign_in"
                 android:textStyle="bold" />
 
-
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
