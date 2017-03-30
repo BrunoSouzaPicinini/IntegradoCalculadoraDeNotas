@@ -72,11 +72,11 @@
                 android:textStyle="bold"
                 android:onClick="onClickLoginUp"/>
             <Button
-                android:id="@+id/sing_in_button"
+                android:id="@+id/sing_up_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
-                android:text="@string/action_sign_in"
+                android:text="@string/action_sign_up"
                 android:onClick="onClickSingUp"
                 />
         </LinearLayout>

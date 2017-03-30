@@ -9,24 +9,41 @@ import android.support.v7.widget.Toolbar;
 import android.view.Display;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import br.com.bspicinini.calculadoradenotas.R;
+import br.com.bspicinini.calculadoradenotas.dao.DAOUsuario;
+import br.com.bspicinini.calculadoradenotas.modelo.ModUsuario;
 
 public class LoginActivity extends AppCompatActivity {
-
+    DAOUsuario  daoUsuario ;
+    ModUsuario modeloUsuario ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        daoUsuario = new DAOUsuario(this);
+        modeloUsuario = new ModUsuario();
     }
 
     public void onClickLoginUp(View v){
             EditText edtUsuario = (EditText) findViewById(R.id.edtLogin);
-            String  usuario = edtUsuario.getText().toString();
+            modeloUsuario.setDescLogin( edtUsuario.getText().toString());
             EditText edtSenha = (EditText) findViewById(R.id.edtSenha);
-            Intent intent = new Intent(getApplicationContext(), ListagemActivity.class);
-            intent.putExtra("Login",usuario);
-            startActivity(intent);
+            modeloUsuario.setDescPassword(edtSenha.getText().toString());
+
+
+            if(daoUsuario.loginUsuarioSenha(modeloUsuario)){
+                Intent intent = new Intent(getApplicationContext(), ListagemActivity.class);
+                intent.putExtra("Login",modeloUsuario.getCodUsuario()+modeloUsuario.getDescLogin());
+                startActivity(intent);
+            }else {
+                Toast toast = Toast.makeText(LoginActivity.this,R.string.error_usuario_senha,Toast.LENGTH_LONG);
+                toast.show();
+            }
+
+
+
 
 
     }

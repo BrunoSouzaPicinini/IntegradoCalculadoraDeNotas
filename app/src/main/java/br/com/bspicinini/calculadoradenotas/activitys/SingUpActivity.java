@@ -12,7 +12,7 @@ import br.com.bspicinini.calculadoradenotas.modelo.ModUsuario;
 
 
 public class SingUpActivity extends AppCompatActivity {
-    DAOUsuario bancoDeDados = new DAOUsuario(this);
+    DAOUsuario daoUsuario = new DAOUsuario(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +20,7 @@ public class SingUpActivity extends AppCompatActivity {
     }
 
     public void onClickCadastrar(View v){
-        if(v.getId() == R.id.sing_in_button){
+        if(v.getId() == R.id.sing_up_button){
             EditText edtUsuario = (EditText) findViewById(R.id.edtLogin);
             EditText edtNome = (EditText) findViewById(R.id.edtNome);
             EditText edtEmail = (EditText) findViewById(R.id.edtEmail);
@@ -43,7 +43,7 @@ public class SingUpActivity extends AppCompatActivity {
                 modeloUsuario.setDescEmail(emailStr);
                 modeloUsuario.setDescLogin(usuarioStr);
                 modeloUsuario.setDescPassword(senhaStr);
-                bancoDeDados.insert(modeloUsuario);
+                daoUsuario.insert(modeloUsuario);
             }
 
 

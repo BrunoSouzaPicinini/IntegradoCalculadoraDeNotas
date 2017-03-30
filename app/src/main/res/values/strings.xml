@@ -4,12 +4,10 @@
     <!-- Strings related to login -->
     <string name="prompt_password">Senha</string>
     <string name="action_login_in">Login</string>
-    <string name="action_sign_in">Sign in</string>
-    <string name="error_invalid_user">Usuário inválido</string>
-    <string name="error_incorrect_password">Senha incorreta</string>
-    <string name="error_field_required">Este campo é obrigatório</string>
+    <string name="action_sign_up">Sign Up</string>
+    <string name="error_usuario_senha">Usuário ou senha incorreto</string>
     <string name="prompt_usuario">Usuário</string>
-    <string name="title_activity_main_login">Login</string>
+    <string name="title_activity_main_login">CalcNotas</string>
     <string name="prompt_nome">Nome</string>
     <string name="senha_nao_confere">Senhas não conferem</string>
     <string name="action_cadastrar">Cadastrar</string>
