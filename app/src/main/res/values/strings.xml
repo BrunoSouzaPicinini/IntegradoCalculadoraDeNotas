@@ -9,6 +9,11 @@
     <string name="error_incorrect_password">Senha incorreta</string>
     <string name="error_field_required">Este campo é obrigatório</string>
     <string name="prompt_usuario">Usuário</string>
-    <string name="title_activity_main_login">CalcNotas</string>
+    <string name="title_activity_main_login">Login</string>
     <string name="prompt_nome">Nome</string>
+    <string name="senha_nao_confere">Senhas não conferem</string>
+    <string name="action_cadastrar">Cadastrar</string>
+    <string name="title_activity_Listagem">Listagem</string>
+    <string name="title_activity_Cadastro">Cadastro</string>
+    <string name="prompt_email">Email</string>
 </resources>

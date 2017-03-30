@@ -9,9 +9,18 @@ public class ModUsuario {
     private String nomUsuario;
     private String descLogin;
     private String descPassword;
+    private String descEmail;
 
     public int getCodUsuario() {
         return codUsuario;
+    }
+
+    public String getDescEmail() {
+        return descEmail;
+    }
+
+    public void setDescEmail(String descEmail) {
+        this.descEmail = descEmail;
     }
 
     public void setCodUsuario(int codUsuario) {

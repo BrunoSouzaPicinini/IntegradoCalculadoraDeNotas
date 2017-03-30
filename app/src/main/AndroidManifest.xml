@@ -10,16 +10,17 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activitys.LoginActivity"
-            android:label="@string/title_activity_main_login"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="@string/title_activity_main_login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activitys.ListagemActivity" />
-        <activity android:name=".activitys.SingUpActivity"></activity>
+        <activity android:name=".activitys.ListagemActivity"
+            android:label="@string/title_activity_Listagem"/>
+        <activity android:name=".activitys.SingUpActivity"
+            android:label="@string/title_activity_Cadastro"/>
     </application>
 
 </manifest>
