@@ -10,4 +10,5 @@
     <string name="error_field_required">Este campo é obrigatório</string>
     <string name="prompt_usuario">Usuário</string>
     <string name="title_activity_main_login">CalcNotas</string>
+    <string name="prompt_nome">Nome</string>
 </resources>
