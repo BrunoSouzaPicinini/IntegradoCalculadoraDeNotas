@@ -20,10 +20,10 @@ public class DAOUsuario extends SQLiteOpenHelper {
     private static final String COLUMN_NAME = "desusuario";
     private static final String COLUMN_LOGIN = "deslogin";
     private static final String COLUMN_SENHA = "dessenha";
-    private static final String COLUMN_EMAIL = "email";
+    private static final String COLUMN_EMAIL = "desemail";
     SQLiteDatabase db;
-    private static final String TABLE_CREATE = "create table cadusuario (codusuario integer primary key not null auto_increment,"+
-            "desusuario text not null, deslogin text not null, dessenha text not null,desemail text not null);";
+    private static final String TABLE_CREATE = "create table cadusuario (codusuario integer primary key autoincrement, "+
+            "desusuario text not null, deslogin text not null, dessenha text not null,desemail text not null)";
 
     private StringBuilder sql = new StringBuilder();
 
@@ -46,7 +46,7 @@ public class DAOUsuario extends SQLiteOpenHelper {
     }
 
     public void insert(ModUsuario usuario) {
-        db = this.getReadableDatabase();
+        db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_NAME, usuario.getNomUsuario());
         values.put(COLUMN_LOGIN, usuario.getDescLogin());
@@ -62,19 +62,23 @@ public class DAOUsuario extends SQLiteOpenHelper {
         sql.delete(0,sql.length());
         sql.append("SELECT ");
         sql.append(COLUMN_LOGIN).append(",");
-        sql.append(COLUMN_SENHA).append(",");
-        sql.append(COLUMN_ID).append(" FROM");
+        sql.append(COLUMN_SENHA).append(" FROM ");
         sql.append(TABLE_NAME).append(" WHERE ");
-        sql.append(COLUMN_LOGIN).append(" = ").append(modeloUsuario.getDescLogin());
-        sql.append(" AND ").append(COLUMN_SENHA).append(" = ").append(modeloUsuario.getDescPassword());
-
-        Cursor cursor = db.rawQuery(sql.toString(),null);
+        sql.append(COLUMN_LOGIN).append(" = '").append(modeloUsuario.getDescLogin()).append("' ");
+        sql.append(" AND ").append(COLUMN_SENHA).append(" = '").append(modeloUsuario.getDescPassword()).append("'");
         try {
-            cursor.moveToFirst();
-            cursor.getString(0);
-            cursor.getString(1);
-            modeloUsuario.setCodUsuario(cursor.getInt(3));
-            return true;
+        Cursor cursor = db.rawQuery(sql.toString(),null);
+            if(cursor == null) {
+                return false;
+
+            }
+                cursor.moveToNext();
+                String posicaoUm = cursor.getString(0);
+                String posicaoDois = cursor.getString(1);
+                cursor.close();
+                return true;
+
+
         }catch (Exception e){
             return false;
         }

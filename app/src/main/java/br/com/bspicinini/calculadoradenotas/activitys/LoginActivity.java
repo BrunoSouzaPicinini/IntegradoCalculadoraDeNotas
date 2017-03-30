@@ -26,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
         modeloUsuario = new ModUsuario();
     }
 
-    public void onClickLoginUp(View v){
+    public void onClickLogin(View v){
             EditText edtUsuario = (EditText) findViewById(R.id.edtLogin);
             modeloUsuario.setDescLogin( edtUsuario.getText().toString());
             EditText edtSenha = (EditText) findViewById(R.id.edtSenha);
@@ -38,27 +38,17 @@ public class LoginActivity extends AppCompatActivity {
                 intent.putExtra("Login",modeloUsuario.getCodUsuario()+modeloUsuario.getDescLogin());
                 startActivity(intent);
             }else {
-                Toast toast = Toast.makeText(LoginActivity.this,R.string.error_usuario_senha,Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(LoginActivity.this, R.string.error_usuario_senha, Toast.LENGTH_LONG);
                 toast.show();
             }
-
-
-
 
 
     }
 
 
     public void onClickSingUp(View v){
-            EditText edtUsuario = (EditText) findViewById(R.id.edtLogin);
-            String  usuario = edtUsuario.getText().toString();
-            EditText edtSenha = (EditText) findViewById(R.id.edtSenha);
-
             Intent intent = new Intent(getApplicationContext(), SingUpActivity.class);
-            intent.putExtra("Login",usuario);
             startActivity(intent);
-
-
     }
 
 }

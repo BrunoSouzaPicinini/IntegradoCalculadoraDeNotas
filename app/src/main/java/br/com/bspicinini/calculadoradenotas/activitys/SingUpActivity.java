@@ -12,11 +12,12 @@ import br.com.bspicinini.calculadoradenotas.modelo.ModUsuario;
 
 
 public class SingUpActivity extends AppCompatActivity {
-    DAOUsuario daoUsuario = new DAOUsuario(this);
+    DAOUsuario daoUsuario ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sing_up);
+        daoUsuario = new DAOUsuario(this);
     }
 
     public void onClickCadastrar(View v){
