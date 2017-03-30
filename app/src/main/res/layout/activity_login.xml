@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="br.com.bspicinini.calculadoradenotas.LoginActivity">
+    tools:context="br.com.bspicinini.calculadoradenotas.MainActivityLogin">
 
     <!-- Login progress -->
     <ProgressBar
@@ -35,13 +35,12 @@
                 android:layout_height="wrap_content">
 
                 <AutoCompleteTextView
-                    android:id="@+id/email"
+                    android:id="@+id/login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_email"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1"
-                    android:singleLine="true" />
+                    android:hint="@string/usuario"
+                    android:inputType="text"
+                    android:maxLines="1" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -58,8 +57,8 @@
                     android:imeActionLabel="@string/action_sign_in_short"
                     android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:singleLine="true" />
+                    android:maxLines="1" />
+
 
             </android.support.design.widget.TextInputLayout>
 
@@ -71,6 +70,7 @@
                 android:layout_marginTop="16dp"
                 android:text="@string/action_sign_in"
                 android:textStyle="bold" />
+
 
         </LinearLayout>
     </ScrollView>
