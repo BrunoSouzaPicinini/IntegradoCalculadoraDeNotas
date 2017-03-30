@@ -14,17 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivityLogin"
+            android:name=".activitys.LoginActivity"
             android:label="@string/title_activity_main_login"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="br.com.bspicinini.calculadoradenotas.MainActivityLogin" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListagemActivity"></activity>
+        <activity android:name=".activitys.ListagemActivity"></activity>
     </application>
 
 </manifest>

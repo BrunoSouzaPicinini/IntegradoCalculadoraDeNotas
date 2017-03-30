@@ -1,4 +1,4 @@
-package br.com.bspicinini.calculadoradenotas;
+package br.com.bspicinini.calculadoradenotas.dao;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

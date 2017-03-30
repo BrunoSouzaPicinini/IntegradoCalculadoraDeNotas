@@ -3,11 +3,11 @@
 
     <!-- Strings related to login -->
     <string name="prompt_password">Senha</string>
-    <string name="action_sign_in">Login</string>
-    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_login_in">Login</string>
+    <string name="action_sign_in">Sign in</string>
     <string name="error_invalid_user">Usuário inválido</string>
     <string name="error_incorrect_password">Senha incorreta</string>
     <string name="error_field_required">Este campo é obrigatório</string>
-    <string name="usuario">Usuário</string>
+    <string name="prompt_usuario">Usuário</string>
     <string name="title_activity_main_login">CalcNotas</string>
 </resources>

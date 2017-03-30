@@ -1,4 +1,4 @@
-package br.com.bspicinini.calculadoradenotas;
+package br.com.bspicinini.calculadoradenotas.modelo;
 
 /**
  * Created by bspicinini on 30/03/2017.

@@ -1,7 +1,9 @@
-package br.com.bspicinini.calculadoradenotas;
+package br.com.bspicinini.calculadoradenotas.activitys;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import br.com.bspicinini.calculadoradenotas.R;
 
 public class ListagemActivity extends AppCompatActivity {
 
