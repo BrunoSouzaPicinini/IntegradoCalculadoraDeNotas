@@ -14,4 +14,5 @@
     <string name="title_activity_Listagem">Listagem</string>
     <string name="title_activity_Cadastro">Cadastro</string>
     <string name="prompt_email">Email</string>
+    <string name="concluido">Concluído</string>
 </resources>

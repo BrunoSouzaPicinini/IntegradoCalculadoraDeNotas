@@ -1,5 +1,6 @@
 package br.com.bspicinini.calculadoradenotas.activitys;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -8,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Display;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -31,11 +33,13 @@ public class LoginActivity extends AppCompatActivity {
             modeloUsuario.setDescLogin( edtUsuario.getText().toString());
             EditText edtSenha = (EditText) findViewById(R.id.edtSenha);
             modeloUsuario.setDescPassword(edtSenha.getText().toString());
-
+        InputMethodManager imm = (InputMethodManager)getSystemService(
+                Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(edtSenha.getWindowToken(), 0);
 
             if(daoUsuario.loginUsuarioSenha(modeloUsuario)){
                 Intent intent = new Intent(getApplicationContext(), ListagemActivity.class);
-                intent.putExtra("Login",modeloUsuario.getCodUsuario()+modeloUsuario.getDescLogin());
+                intent.putExtra("Login",modeloUsuario.getCodUsuario()+" - "+modeloUsuario.getDescLogin());
                 startActivity(intent);
             }else {
                 Toast toast = Toast.makeText(LoginActivity.this, R.string.error_usuario_senha, Toast.LENGTH_LONG);

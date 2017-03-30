@@ -45,6 +45,8 @@ public class SingUpActivity extends AppCompatActivity {
                 modeloUsuario.setDescLogin(usuarioStr);
                 modeloUsuario.setDescPassword(senhaStr);
                 daoUsuario.insert(modeloUsuario);
+                Toast concluido = Toast.makeText(SingUpActivity.this, R.string.concluido,Toast.LENGTH_LONG);
+                concluido.show();
             }
 
 
