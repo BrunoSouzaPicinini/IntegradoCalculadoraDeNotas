@@ -14,11 +14,12 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="br.com.bspicinini.calculadoradenotas.activitys.LoginActivity"/>
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".activitys.ListagemActivity" />
+        <activity android:name=".activitys.SingUpActivity"></activity>
     </application>
 
 </manifest>
